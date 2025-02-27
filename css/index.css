@@ -10,7 +10,7 @@
 }
 :root{
     --prime:#3BAE58;
-    --sec:#f1f2e2;
+    --sec:#f2f2ee;
     ---txt:#5e97ff;
     --box:#3d4a3e;
 }
@@ -110,11 +110,14 @@ nav{
     transition: all 1s;
 }
 input:checked~.link{
-    left: 0;
+    right: 0px;
+    top: 50px;
     transition: all 1s;
     opacity:1;
 }
-
+.link > label{
+    display: none;
+}
 /* this for home */
 .coverall{
     min-height: 100vh;
@@ -128,8 +131,8 @@ input:checked~.link{
 }
 /* this video div */
 .vid{
-    margin-top: 6px;
-   height: 673px;
+    margin-top: 50px;
+   height: 620px;
 }
 /* this for the video */
 .vid video{
@@ -142,7 +145,7 @@ input:checked~.link{
     text-align: center;
     position: absolute;
     top: 40%;
-    left: 14%;
+    left: 11%;
     color: var(--sec);
     text-shadow: 0 0 20px black;
     animation: text 2s 1;    
@@ -655,6 +658,12 @@ footer > .end{
         color: white;
         text-decoration: underline var(---txt);
     }
+    .link > label{
+        display: block;
+    }
+    .link > label > i{
+        color: white;
+    }
     /* this for the navbar fold */
     .link{
         align-items: center;
@@ -664,11 +673,11 @@ footer > .end{
         gap: 10px;
         flex-direction: column;
         top: 0px;
-        left: 380px;
-        width: 100%;
-        height:60vh;
+        right:-150px;
+        width: 50%;
+        min-height:60vh;
         opacity: 0;
-        background-color:var(--prime);
+        background-color:rgb(0, 0, 0,0.7);
     }
     .vid{
         margin-top: 20px;
@@ -676,7 +685,8 @@ footer > .end{
         height: fit-content;
     }
     .vid video{
-        height: 500px;
+        margin-top: 20px;
+        height: 535px;
     }
     .text{
         top: 30%;
@@ -756,8 +766,11 @@ footer > .end{
 /* this for the tablet */
 @media only screen and (max-width:900px) and (min-width:600px){
    .text{
-    top: 40%;
-    left: 0px;
+    top: 35%;
+    left: 12px;
+   }
+   .vid{
+     height: 500px;
    }
    .text h1{
     font-size: 45px !important;

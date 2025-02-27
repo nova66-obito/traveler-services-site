@@ -99,7 +99,9 @@ nav{
      transition: all 1s;
      background: var(--prime);
      z-index: -1;
-    
+ }
+ .link > label{
+    display: none;
  }
 /* click bar for mobile view */
 .clk > label,.clk > input {
@@ -111,7 +113,8 @@ nav{
     transition: all 1s;
 }
 input:checked~.link{
-    left: 0;
+    left:160px;
+    top: 50px;
     transition: all 1s;
     opacity: 1;
 }
@@ -341,6 +344,10 @@ footer > .end{
 /* this for the navbar fold */
 .link > label> i{
     font-size: 30px;
+    color: whitesmoke;
+}
+.link > label{
+    display: block;
 }
 .link{
     justify-content: center;
@@ -351,16 +358,19 @@ footer > .end{
     flex-direction: column;
     top: 0px;
     left: 380px;
-    width: 100%;
+    width: 50%;
     height:60vh;
     opacity: 0;
-    background-color:var(--prime);
+    background-color:rgb(0, 0, 0,0.5);
 }
 .link > a{
     color: var(--sec);
     text-decoration: underline var(---txt);
 }
  /* about */
+ .about-page{
+    height: 100vh;
+ }
  .cover{
     flex-direction: column;
     padding: 15px;

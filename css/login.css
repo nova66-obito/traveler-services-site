@@ -102,6 +102,9 @@ nav{
      background-color:var(--prime);
      transition: all 0.5s;
  }
+ .link > label{
+    display: none;
+ }
  /* click bar for mobile view */
  .clk > label,.clk > input{
      display: none !important;
@@ -111,7 +114,8 @@ nav{
      transition: all 1s;
  }
  input:checked~.link{
-     left: 0;
+     right: 0;
+     top: 50px;
      transition: all 1s;
      opacity: 1;
  }
@@ -392,6 +396,10 @@ footer > .end{
       display:block !important;
       font-size:30px;
     }
+    .link > label{
+        display: block;
+        color:white
+    }
     /* this for the navbar fold */
     .link{
         align-items: center;
@@ -401,14 +409,18 @@ footer > .end{
         gap: 20px;
         flex-direction: column;
         top:0px;
-        left: 380px;
-        width: 100%;
+        right: -180px;
+        width: 50%;
         height:60vh;
         opacity: 0;
-        background-color:var(--prime);
+        background-color:rgba(0, 0, 0, 0.6);
     }
     .link > a{
         color: var(--sec);
+        text-decoration: underline var(---txt);
+    }
+    .c-page{
+        min-height: 100vh;
     }
     .main{
         margin-top: 60px;
