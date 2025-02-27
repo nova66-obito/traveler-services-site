@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Rubik+Vinyl&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --prime:#3BAE58;
+    --sec:#f1f2e2;
+    ---txt:#5e97ff;
+    --box:#3d4a3e;
+}
+/* scroll animation */
+.block2{
+    animation: up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block1{
+    animation: left-side linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes left-side {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: moves linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes moves {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+/* this for the navbar */
+.logo > h1{
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav{
+    height: 10vh;
+    padding: 2px 20px;
+    background-color: var(--sec);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 0 20px black;
+}
+.link > a{
+    text-decoration: none;
+    padding: 5px 15px;
+    color: var(--prime);
+    position: relative;
+    font-weight: bold;
+}
+.link > a::after{
+   content: "";
+   position: absolute;
+   width: 0;
+   height:100%;
+   left: 0;
+   bottom: 0px;
+   background-color: var(--prime);
+   z-index: -1;
+   border-radius: 10px;
+}
+.link > a:hover::after{
+    width:100%;
+    background-color:var(--prime);
+    transition: all 0.5s;
+}
+/* click bar for mobile view */
+.clk > label,.clk > input{
+    display: none !important;
+}
+.link > a:hover{
+    color: var(--sec);
+    transition: all 1s;
+}
+input:checked~.link{
+    left: 0;
+    transition: all 1s;
+    opacity: 1;
+}
+/* this for the about */
+.about-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../image/about2.jpg);
+    color: var(--prime);
+    position: relative;
+}
+.text h1{
+   font-size: 50px !important;
+   color: var(---txt);
+   text-shadow: 3px 1px black;
+}
+.text a{
+    text-decoration: none;
+    color: var(--box);
+}
+.text a::after{
+    content: ">>";
+
+}
+.text a:hover{
+    color: var(---txt);
+}
+/* about up */
+.about-page > .up{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:black;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    position:fixed;
+    z-index: 1;
+    right:20px;
+    bottom:20px;
+}
+.up > a{
+  color:var(--prime);
+}
+.card{
+    min-height: 100vh;
+    background: var(--sec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+}
+/* location */
+.locat{
+    padding: 30px
+}
+.locat > h1{
+    padding: 10px 0;
+    color: var(---txt);
+}
+.locat > h3{
+    color: var(--prime);
+}
+.l-cover{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+}
+.l-cover > .l-box{
+    width: 300px;
+    min-height: 400px;
+    background-color:white;
+    border: 2px solid green;
+}
+.l-img > img{
+    height: 240px;
+}
+/* text */
+.sub-loc > h3:hover{
+  color: var(--prime);
+  cursor: pointer;
+}
+.sub-loc > p > i{
+   color: var(--prime);
+   margin-right: 5px;
+}
+.sub-loc > p{
+    font-size: 15px !important;
+}
+.sub-loc > h3{
+    text-align: center;
+}
+.sub-loc > h5 > i{
+    color: var(--prime);
+}
+/* hover */
+.l-box:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px black;
+    transform: all 0.5s;
+}
+/* all box */
+.all-sta{
+    min-height: 100vh;
+    background-color:var(--sec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.all-sta > h1{
+    color: var(---txt);
+}
+.all-sta > h3{
+    color: var(--prime);
+}
+.al-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+.al-cover > .a-box{
+    width: 400px;
+}
+.a-box:hover {
+  box-shadow: 0 0 10px black;
+ }
+.al-text{
+    background: white;
+}
+/* review */
+.review{
+    gap: 20px;
+}
+.review > h1{
+    padding: 20px 0 0 0 ;
+    color: var(---txt);
+}
+.review > h3{
+    color: var(--prime);
+}
+.r-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.r-cover > .cus-box{
+   width: 550px;
+   border: 2px solid var(--prime);
+   min-height: 300px;   
+   background-color:white;
+   padding: 20px;
+   box-shadow: 0 0 20px black;
+}
+.r-img{
+    display: flex;
+    justify-content: center;
+}
+.r-img > img{
+  padding: 2px;
+  border: 2px dotted var(--prime);
+  width: 100px;
+  height: 100px;
+}
+.rtext{
+    text-align: center;
+}
+.rtext > h4{
+    color: var(--prime);
+}
+.rtext> div > i{
+    color: var(--prime);
+}
+ /* footer */
+ footer{
+    background:rgb(43, 42, 42);
+    min-height: 30vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    color: white;
+}
+footer > .end{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   padding: 10px;
+}
+.end > .e-box{
+   width:30%;
+   display: grid;
+   place-content: center;
+}
+.e-box > h3{
+    color: var(---txt)
+}
+.e-icon{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.e-icon > i{
+    margin: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.e-icon >i:hover{
+    color: var(--prime);
+    text-shadow: 0 0 10px red;
+}
+.e-box1 > a{
+   text-decoration: none;
+   margin: 5px 0;
+   color:var(--sec);
+}
+.e-box1 > a:hover{
+    color:var(--prime);
+    text-decoration: underline white;
+}
+.e-box3 > p > i{
+    margin-right:5px;
+    font-size: 25px;
+}
+.e-box3 >p:hover{
+    text-decoration: underline;
+    color: var(--prime);
+}
+
+@media only screen and (max-width:700px) and (min-width:300px){
+    .clk > label{
+      display:block !important;
+      font-size:30px;
+    }
+    /* this for the navbar fold */
+    .link > label > i{
+        font-size: 30px;
+    }
+    .link{
+        align-items: center;
+        position: fixed;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+        top:0px;
+        left: 380px;
+        width: 100%;
+        height:60vh;
+        opacity: 0;
+        background-color:var(--prime);
+    }
+    .link > a{
+        color: var(--sec);
+        text-decoration: underline var(---txt);
+    }
+     /* place */
+     .l-cover > .l-box{
+        width: 90%;
+       }
+       .sub-loc > h5 {
+          font-size: 14px;
+       }
+       .sub-loc > h3{
+        font-size: 20px;
+       }
+       .locat{
+        padding: 0px;
+       }
+       .l-cover{
+        padding: 10px;
+       }
+       /* all */
+       .al-cover{
+        padding: 0;
+       }
+       .al-cover > .a-box{
+        width: 90%;
+       }
+       .al-tx > p{
+        font-size: 10px;
+       }
+          /* review */
+          .r-cover > .cus-box{
+            width: 100%;
+           }
+           .review > h3{
+             font-size: 15px;    
+           }
+          /* footer */
+     footer >  .end{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 70px;
+    }
+    .end > .e-box{
+        width: 100%;
+       place-content: start;
+    }
+      
+}
+@media only screen and (max-width:900px) and (min-width:700px){
+    .al-cover > .a-box {
+        width: 335px;
+    }
+     /* footer */
+     footer > .end{
+        gap: 30px;
+    }
+    .end > .e-box{
+        width: 40%;
+    }
+    .e-icon > i{
+        font-size:30px ;
+    } 
+}

@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Rubik+Vinyl&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --prime:#3BAE58;
+    --sec:#f1f2e2;
+    ---txt:#5e97ff;
+    --box:#3d4a3e;
+}
+/* scroll animation */
+.block2{
+    animation: up linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes up {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block1{
+    animation: left-side linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes left-side {
+    from{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.block{
+    animation: moves linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40% ;
+}
+@keyframes moves {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+/* this for the navbar */
+.logo > h1{
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav{
+    height: 10vh;
+    padding: 2px 20px;
+    background-color:var(--sec);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 0 20px black;
+}
+.link a{
+    text-decoration: none;
+    padding: 5px 15px;
+    color: var(--prime);
+    position: relative;
+    font-weight: bolder;
+}
+.link a::after{
+    content: "";
+    position: absolute;
+    width:0;
+    height:100%;
+    left: 45%;
+    border-radius: 10px;
+ }
+ .link a:hover::after{
+     width: 100%;
+     left: 0;
+     transition: all 1s;
+     background: var(--prime);
+     z-index: -1;
+    
+ }
+/* click bar for mobile view */
+.clk > label,.clk > input {
+    display: none !important;
+}
+.link a:hover{
+    color: var(--sec);
+    border-radius: 10px;
+    transition: all 1s;
+}
+input:checked~.link{
+    left: 0;
+    transition: all 1s;
+    opacity: 1;
+}
+/* this for the about */
+.about-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../image/about2.jpg);
+    color: var(--prime);
+    position: relative;
+}
+.text h1{
+   font-size: 50px !important;
+   color: var(---txt);
+   text-shadow: 3px 1px black;
+}
+.text a{
+    text-decoration: none;
+    color: var(--box);
+}
+.text a::after{
+    content: ">>";
+}
+/* about */
+/* this for the about */
+.card{
+    min-height: 100vh;
+    background: var(--sec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+}
+/* about up */
+.a-cover > .up{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:black;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    position:fixed;
+    z-index: 1;
+    right:20px;
+    bottom:20px;
+}
+.up > a{
+  color:var(--prime);
+}
+.cover{
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   min-height: 100vh;
+   position: relative;
+}
+.cover > div{
+   width: 40%;
+}
+.cover > .c-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    height: 400px;
+}
+.a-box1{
+   background-color: #f9f9f9;
+   border-radius: 10px;
+   z-index: 1;
+   border: 2px solid var(--prime);
+}
+.a-box1 > button{
+    background: #5e97ff;
+    color: var(--sec);
+    padding: 5px 20px;
+    border: 2px solid var(--prime);
+    box-shadow:0 5px #3d4a3e;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.a-box2 >  img{
+   height: 500px;
+}
+.a-box2{
+    position: relative;
+    transform: translateX(-100px);
+    height: 500px;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px black;   
+}
+/* services */
+.service{
+    gap: 30px;
+}
+.service > h1{
+    color: var(---txt);
+    margin-top: 20px;
+}
+.service > h3{
+    color: var(--prime);
+}
+.s-cover{
+   display: flex ;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 20px;
+ }
+.s-box{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    width: 46%;
+    min-height: 300px;
+    background:var(--box);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+}
+.s-box:hover{
+    scale: 1.1;
+}
+.s-box > h3{
+    color: var(---txt);
+    text-decoration: underline white;
+}
+.s-box > i{
+    width: 60px;
+    height: 60px;
+    background-color: var(--sec);
+    place-content: center;
+    display: grid;
+    font-size: 30px;
+    color: var(--prime);
+    border-radius: 50%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px black;
+    animation: i-rot infinite 3s ;
+}
+@keyframes i-rot{
+    from{
+        opacity: 0;
+        transform: rotatey(180deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotatey(-180deg);
+    }
+}
+/* footer */
+footer{
+    background:rgb(43, 42, 42);
+    min-height: 30vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    color: white;
+}
+footer > .end{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   padding: 10px;
+}
+.end > .e-box{
+   width:30%;
+   display: grid;
+   place-content: center;
+}
+.e-box > h3{
+    color: var(---txt)
+}
+.e-icon{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.e-icon > i{
+    margin: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.e-icon >i:hover{
+    color: var(--prime);
+    text-shadow: 0 0 10px red;
+}
+.e-box1 > a{
+   text-decoration: none;
+   margin: 5px 0;
+   color:var(--sec);
+}
+.e-box1 > a:hover{
+    color:var(--prime);
+    text-decoration: underline white;
+}
+.e-box3 > p > i{
+    margin-right:5px;
+    font-size: 25px;
+}
+.e-box3 >p:hover{
+    text-decoration: underline;
+    color: var(--prime);
+}
+@media only screen and (max-width:700px) and (min-width:300px){
+.clk > label{
+  display:block !important;
+  font-size:30px;
+}
+/* this for the navbar fold */
+.link > label> i{
+    font-size: 30px;
+}
+.link{
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    top: 0px;
+    left: 380px;
+    width: 100%;
+    height:60vh;
+    opacity: 0;
+    background-color:var(--prime);
+}
+.link > a{
+    color: var(--sec);
+    text-decoration: underline var(---txt);
+}
+ /* about */
+ .cover{
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+   }
+   .cover > div{
+    width: 100%;
+   }
+   .a-box2{
+    transform: translateX(0px);
+    height: 400px;
+   }
+   .a-box2 {
+    display: none;
+   }
+    /* service */
+    .s-box{
+        width: 90%;
+       }
+          /* footer */
+     footer >  .end{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 70px;
+    }
+    .end > .e-box{
+        width: 100%;
+       place-content: start;
+    }
+}
+@media only screen and (max-width:900px) and (min-width:700px){
+    /* about */
+   .a-box2 {
+    display: none;
+   }
+   .cover >.c-text{
+    width: 90%;
+   }
+   
+
+   /* footer */
+   footer > .end{
+    gap: 30px;
+}
+.end > .e-box{
+    width: 40%;
+}
+.e-icon > i{
+    font-size:30px ;
+} 
+}
