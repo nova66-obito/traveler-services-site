@@ -11,7 +11,7 @@
 }
 :root{
     --prime:#3BAE58;
-    --sec:#f1f2e2;
+    --sec:rgb(231, 226, 226);
     ---txt:#5e97ff;
     --box:#3d4a3e;
 }
@@ -466,6 +466,7 @@ footer > .end{
             flex-direction: column;
             justify-content: flex-start;
             gap: 70px;
+            padding: 30px;
         }
         .end > .e-box{
             width: 100%;

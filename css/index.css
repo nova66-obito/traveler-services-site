@@ -10,7 +10,7 @@
 }
 :root{
     --prime:#3BAE58;
-    --sec:#f2f2ee;
+    --sec:rgb(231, 226, 226);
     ---txt:#5e97ff;
     --box:#3d4a3e;
 }
@@ -110,9 +110,9 @@ nav{
     transition: all 1s;
 }
 input:checked~.link{
-    right: 0px;
-    top: 50px;
-    transition: all 1s;
+    left:0px;
+    top: 55px;
+    transition: all 0.5s;
     opacity:1;
 }
 .link > label{
@@ -673,20 +673,20 @@ footer > .end{
         gap: 10px;
         flex-direction: column;
         top: 0px;
-        right:-150px;
-        width: 50%;
+        left:380px;
+        width:100%;
         min-height:60vh;
         opacity: 0;
         background-color:rgb(0, 0, 0,0.7);
     }
     .vid{
-        margin-top: 20px;
+        margin-top: 30px;
         width: 100%;
-        height: fit-content;
+        height: 100vh;
     }
     .vid video{
         margin-top: 20px;
-        height: 535px;
+        height: 100vh;
     }
     .text{
         top: 30%;
@@ -752,11 +752,15 @@ footer > .end{
        .contact{
         padding: 0;
        }
+       .con-cover{
+        padding: 20px 0;
+       }
         /* footer */
      footer >  .end{
         flex-direction: column;
         justify-content: flex-start;
         gap: 70px;
+        padding: 30px;
     }
     .end > .e-box{
         width: 100%;
